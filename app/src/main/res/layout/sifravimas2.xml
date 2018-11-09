@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/irasoma"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Įrašykite tekstą"/>
+
+    <Button
+        android:id="@+id/mygtuka"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/irasoma"
+        android:enabled="false"
+        android:text="Šifruoti" />
+    <Button
+        android:id="@+id/issifravima"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mygtuka"
+        android:enabled="false"
+        android:text="Iššifruoti"/>
+    <Button
+        android:id="@+id/cop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/issifravima"
+        android:enabled="false"
+        android:text="Kopijuoti"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/cop">
+        <TextView
+            android:id="@+id/rezultata"
+            android:textIsSelectable="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp" />
+    </ScrollView>
+</RelativeLayout>
+

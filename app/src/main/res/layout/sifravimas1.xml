@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/irasomass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/ra_ykite_tekst"
+        android:autofillHints=""
+        android:inputType="" tools:targetApi="o"/>
+    <Button
+        android:id="@+id/mygtukass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/irasomass"
+        android:onClick="encrypt"
+        android:enabled="false"
+        android:text="@string/ifruoti" />
+    <Button
+        android:id="@+id/issifravimass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mygtukass"
+        android:onClick="decrypt"
+        android:enabled="false"
+        android:text="@string/i_ifruoti"/>
+    <Button
+        android:id="@+id/copyy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:layout_below="@id/issifravimass"
+
+        android:text="@string/kopijuoti"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/copyy">
+        <TextView
+            android:id="@+id/rezultatass"
+            android:textIsSelectable="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp" />
+    </ScrollView>
+
+</RelativeLayout>
+
