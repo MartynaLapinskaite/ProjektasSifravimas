@@ -15,21 +15,23 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/irasoma"
         android:enabled="false"
-        android:text="Šifruoti" />
+        android:onClick="btnMD5"
+        android:text="@string/ifruoti" />
     <Button
         android:id="@+id/issifravima"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/mygtuka"
         android:enabled="false"
-        android:text="Iššifruoti"/>
+        android:text="@string/i_ifruoti"/>
     <Button
         android:id="@+id/cop"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/issifravima"
         android:enabled="false"
-        android:text="Kopijuoti"/>
+        android:onClick="btnnMD5"
+        android:text="@string/kopijuot"/>
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"

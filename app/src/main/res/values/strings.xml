@@ -1,3 +1,13 @@
 <resources>
     <string name="app_name">ProjektasSifravimas</string>
+    <string name="pasirinkite_sifravimo_buda">pasirinkite sifravimo buda</string>
+    <string name="aes_algoritmas">aes algoritmas</string>
+    <string name="rsa_algoritmas">RSA algoritmas</string>
+    <string name="md5_algoritmas">md5 algoritmas</string>
+    <string name="sifruoti">sifruoti</string>
+    <string name="issifruoti">issifruoti</string>
+    <string name="kopijuoti">kopijuoti</string>
+    <string name="ifruoti">Šifruoti</string>
+    <string name="i_ifruoti">Iššifruoti</string>
+    <string name="kopijuot">Kopijuoti</string>
 </resources>

@@ -10,7 +10,7 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="pasirinkite sifravimo buda"
+        android:text="@string/pasirinkite_sifravimo_buda"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="24sp" />
@@ -19,19 +19,19 @@
         android:id="@+id/aes"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="aes algoritmas" />
+        android:text="@string/aes_algoritmas" />
 
     <Button
         android:id="@+id/rsaa"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="RSA algoritmas" />
+        android:text="@string/rsa_algoritmas" />
 
     <Button
         android:id="@+id/md5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="md5 algoritmas" />
+        android:text="@string/md5_algoritmas" />
 
 
 

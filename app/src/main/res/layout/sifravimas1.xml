@@ -7,9 +7,7 @@
         android:id="@+id/irasomass"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/ra_ykite_tekst"
-        android:autofillHints=""
-        android:inputType="" tools:targetApi="o"/>
+        />
     <Button
         android:id="@+id/mygtukass"
         android:layout_width="match_parent"
@@ -17,7 +15,7 @@
         android:layout_below="@id/irasomass"
         android:onClick="encrypt"
         android:enabled="false"
-        android:text="@string/ifruoti" />
+        android:text="@string/sifruoti" />
     <Button
         android:id="@+id/issifravimass"
         android:layout_width="match_parent"
@@ -25,7 +23,7 @@
         android:layout_below="@id/mygtukass"
         android:onClick="decrypt"
         android:enabled="false"
-        android:text="@string/i_ifruoti"/>
+        android:text="@string/issifruoti"/>
     <Button
         android:id="@+id/copyy"
         android:layout_width="match_parent"
