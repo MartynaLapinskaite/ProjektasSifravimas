@@ -33,6 +33,13 @@
         android:layout_height="wrap_content"
         android:text="@string/md5_algoritmas" />
 
+    <Button
+        android:id="@+id/base"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/base64_algoritmas" />
+
+
 
 
 </LinearLayout>

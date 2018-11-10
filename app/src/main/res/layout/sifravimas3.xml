@@ -1,41 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent">
 
     <EditText
-        android:id="@+id/irasomass"
+        android:id="@+id/irasom"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        />
-    <Button
-        android:id="@+id/mygtukass"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/irasomass"
-        android:onClick="encrypt"
-        android:enabled="false"
-        android:text="@string/sifruoti" />
-    <Button
-        android:id="@+id/issifravimass"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/mygtukass"
-        android:onClick="decrypt"
-        android:enabled="false"
-        android:text="@string/issifruoti"/>
+        android:hint="@string/ra_ykite_tekst"/>
 
+    <Button
+        android:id="@+id/mygtuk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/irasom"
+        android:enabled="false"
+        android:onClick="encrypt"
+        android:text="@string/ifruoti" />
+    <Button
+        android:id="@+id/issifravim"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mygtuk"
+        android:enabled="false"
+        android:onClick="decrypt"
+        android:text="@string/i_ifruoti"/>
+    <Button
+        android:id="@+id/co"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/issifravim"
+        android:enabled="false"
+        android:text="@string/kopijuot"/>
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/issifravimass">
+        android:layout_below="@id/co">
         <TextView
-            android:id="@+id/rezultatass"
+            android:id="@+id/rezultat"
             android:textIsSelectable="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18sp" />
     </ScrollView>
-
 </RelativeLayout>
 

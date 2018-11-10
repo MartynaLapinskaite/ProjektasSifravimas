@@ -10,4 +10,6 @@
     <string name="ifruoti">Šifruoti</string>
     <string name="i_ifruoti">Iššifruoti</string>
     <string name="kopijuot">Kopijuoti</string>
+    <string name="ra_ykite_tekst">Įrašykite tekstą</string>
+    <string name="base64_algoritmas">Base64 algoritmas</string>
 </resources>

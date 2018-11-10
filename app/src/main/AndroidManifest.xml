@@ -19,6 +19,7 @@
         <activity android:name=".Pirmas"></activity>
         <activity android:name=".Antras"></activity>
         <activity android:name=".Trecias"></activity>
+        <activity android:name=".Ketvirtas"></activity>
     </application>
 
 </manifest>

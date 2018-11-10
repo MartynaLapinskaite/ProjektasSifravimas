@@ -69,6 +69,7 @@ public class Trecias extends AppCompatActivity {
         try {
             md5Data = new BigInteger(1, md5.encryptMD5(md5Input));
         }catch (Exception e){
+            Toast.makeText(Trecias.this, "Klaida", Toast.LENGTH_SHORT).show();
             e.printStackTrace();
         }
 
@@ -80,30 +81,40 @@ public class Trecias extends AppCompatActivity {
         rezultata.setText(md5Str);
 
     }
-
-
-
-    public void btnnMD5(View v){
-
-        byte[] md5Input = irasoma.getText().toString().getBytes();
-        BigInteger md5Data = null;
-
-
-
+    public void aaa(View v) {
         try {
-            md5Data = new BigInteger(1, md5.decryptMD5(md5Input));
-        }catch (Exception e){
-            e.printStackTrace();
-        }
+            String input = irasoma.getText().toString();
+            MessageDigest md = MessageDigest.getInstance("MD5");
+            byte[] messageDigest = md.digest(input.getBytes());
+            BigInteger number = new BigInteger(1, messageDigest);
+            String md5 = number.toString(16);
 
-        String md5Str = md5Data.toString(16);
-        if(md5Str.length()<32){
-            md5Str= 0+md5Str;
-        }
+            while (md5.length() < 32)
+                md5 = "0" + md5;
 
-        rezultata.setText(md5Str);
+            rezultata.setText(md5);
+        } catch (NoSuchAlgorithmException e) {
+
+
+        }
 
     }
+    public void aa(View v) {
+        try {
+            String md5 = irasoma.getText().toString();
+            java.security.MessageDigest md = java.security.MessageDigest.getInstance("MD5");
+            byte[] array = md.digest(md5.getBytes());
+            StringBuffer sb = new StringBuffer();
+            for (int i = 0; i < array.length; ++i) {
+                sb.append(Integer.toHexString((array[i] & 0xFF) | 0x100).substring(1,3));
+            }
+            rezultata.setText(sb.toString());
+        } catch (java.security.NoSuchAlgorithmException e) {
+        }
+
+
+    }
+
 
     private TextWatcher loginTextWatcher = new TextWatcher() {
         @Override

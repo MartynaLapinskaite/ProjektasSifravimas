@@ -10,6 +10,7 @@ public class MainActivity extends AppCompatActivity {
     private Button aes;
     private Button rsaa;
     private Button md5;
+    private Button base;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +41,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        base = (Button)findViewById(R.id.base);
+        base.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                openKetvirtas();
+            }
+        });
+
     }
     public void openPirmas(){
         Intent intent = new Intent(this, Pirmas.class);
@@ -53,6 +62,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void openTrecias(){
         Intent intent = new Intent(this, Trecias.class);
+        startActivity(intent);
+    }
+
+    public void openKetvirtas(){
+        Intent intent = new Intent(this, Ketvirtas.class);
         startActivity(intent);
     }
 }

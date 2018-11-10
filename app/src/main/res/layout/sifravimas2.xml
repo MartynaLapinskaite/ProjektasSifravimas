@@ -30,7 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/issifravima"
         android:enabled="false"
-        android:onClick="btnnMD5"
+        android:onClick="aaa"
         android:text="@string/kopijuot"/>
     <ScrollView
         android:layout_width="match_parent"

@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.math.BigInteger;
 import java.util.Map;
@@ -22,7 +23,6 @@ public class Antras extends AppCompatActivity {
     private byte[] encodeData=null;
     Button mygtukass;
     Button issifravimass;
-    Button copyy;
     String rez;
 
     @Override
@@ -47,14 +47,6 @@ public class Antras extends AppCompatActivity {
         mygtukass = (Button) findViewById(R.id.mygtukass);
         issifravimass = (Button) findViewById(R.id.issifravimass);
 
-        copyy=(Button)findViewById(R.id.copyy);
-        copyy.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                rez = rezultatass.getText().toString();
-                irasomass.setText(rez);
-            }
-        });
     }
 
     public void encrypt(View v){
@@ -65,6 +57,7 @@ public class Antras extends AppCompatActivity {
             String encodeStr = new BigInteger(1, encodeData).toString();
             rezultatass.setText(encodeStr);
         }catch (Exception e){
+            Toast.makeText(Antras.this, "Klaida", Toast.LENGTH_SHORT).show();
             e.printStackTrace();
         }
     }
@@ -76,6 +69,7 @@ public class Antras extends AppCompatActivity {
             String decodeStr = new String(decodeData);
             rezultatass.setText(decodeStr);
         }catch (Exception e){
+            Toast.makeText(Antras.this, "Klaida", Toast.LENGTH_SHORT).show();
             e.printStackTrace();
         }
     }
@@ -98,7 +92,6 @@ public class Antras extends AppCompatActivity {
 
             mygtukass.setEnabled(!irasomas1.isEmpty());
             issifravimass.setEnabled(!irasomas1.isEmpty());
-            copyy.setEnabled(!irasomas1.isEmpty());
         }
         @Override
         public void afterTextChanged(Editable s) {
